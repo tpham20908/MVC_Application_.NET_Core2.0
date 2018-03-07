@@ -1,0 +1,10 @@
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\bin\Debug\netcoreapp2.0\HelloMVC.deps.json
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\bin\Debug\netcoreapp2.0\HelloMVC.runtimeconfig.json
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\bin\Debug\netcoreapp2.0\HelloMVC.runtimeconfig.dev.json
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\bin\Debug\netcoreapp2.0\HelloMVC.dll
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\bin\Debug\netcoreapp2.0\HelloMVC.pdb
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\obj\Debug\netcoreapp2.0\HelloMVC.csproj.CoreCompileInputs.cache
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\obj\Debug\netcoreapp2.0\HelloMVC.AssemblyInfoInputs.cache
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\obj\Debug\netcoreapp2.0\HelloMVC.AssemblyInfo.cs
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\obj\Debug\netcoreapp2.0\HelloMVC.dll
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Project\HelloMVC\obj\Debug\netcoreapp2.0\HelloMVC.pdb
