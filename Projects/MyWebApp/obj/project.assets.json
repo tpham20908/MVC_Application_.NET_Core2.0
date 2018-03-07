@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Project\\HelloMVC\\HelloMVC.csproj",
-      "projectName": "HelloMVC",
-      "projectPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Project\\HelloMVC\\HelloMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyWebApp\\MyWebApp.csproj",
+      "projectName": "MyWebApp",
+      "projectPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyWebApp\\MyWebApp.csproj",
       "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Project\\HelloMVC\\obj\\",
+      "outputPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
