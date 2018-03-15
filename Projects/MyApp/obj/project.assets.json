@@ -5960,11 +5960,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyApp\\MyApp.csproj",
+      "projectUniqueName": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyApp\\MyApp.csproj",
       "projectName": "MyApp",
-      "projectPath": "c:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyApp\\MyApp.csproj",
+      "projectPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyApp\\MyApp.csproj",
       "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyApp\\obj\\",
+      "outputPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Projects\\MyApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
