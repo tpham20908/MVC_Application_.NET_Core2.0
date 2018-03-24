@@ -1,7 +1,7 @@
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\obj\Debug\FakeHtmlHelper.csprojResolveAssemblyReference.cache
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\obj\Debug\FakeHtmlHelper.csproj.CoreCompileInputs.cache
 C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\bin\Debug\FakeHtmlHelper.exe.config
 C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\bin\Debug\FakeHtmlHelper.exe
 C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\bin\Debug\FakeHtmlHelper.pdb
-C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\obj\Debug\FakeHtmlHelper.csprojResolveAssemblyReference.cache
-C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\obj\Debug\FakeHtmlHelper.csproj.CoreCompileInputs.cache
 C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\obj\Debug\FakeHtmlHelper.exe
 C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\FakeHtmlHelper\obj\Debug\FakeHtmlHelper.pdb
