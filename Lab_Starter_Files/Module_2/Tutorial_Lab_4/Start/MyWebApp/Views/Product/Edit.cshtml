@@ -18,6 +18,11 @@
         @Html.TextBox("name", Model.Name)<br />
         @Html.TextBox("price", Model.Price)<br />
         <input type="submit" value="Submit" /><br />
+
+        @Html.HiddenFor(p => p.ID, Model.ID)<br />
+        @Html.TextBoxFor(p => p.Name, Model.Name)<br />
+        @Html.TextBoxFor(p => p.Price, Model.Price)<br />
+        <input type="submit" value="Submit" /><br />
     }
 </body>
 </html>
