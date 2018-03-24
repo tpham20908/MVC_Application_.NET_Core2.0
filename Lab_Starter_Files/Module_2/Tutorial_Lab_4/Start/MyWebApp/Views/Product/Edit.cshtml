@@ -13,6 +13,11 @@
         <input type="text" name="name" value="@Model.Name" /><br />
         <input type="text" name="price" value="@Model.Price" /><br />
         <input type="submit" value="Submit" /><br />
+
+        @Html.Hidden("id", Model.ID)<br />
+        @Html.TextBox("name", Model.Name)<br />
+        @Html.TextBox("price", Model.Price)<br />
+        <input type="submit" value="Submit" /><br />
     }
 </body>
 </html>
