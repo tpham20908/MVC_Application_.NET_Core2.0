@@ -22,6 +22,8 @@
         @Html.HiddenFor(p => p.ID, Model.ID)<br />
         @Html.TextBoxFor(p => p.Name, Model.Name)<br />
         @Html.TextBoxFor(p => p.Price, Model.Price)<br />
+        @Html.TextBox("user", "Timothy")<br />
+        @Html.Password("password", "123456")<br />
         <input type="submit" value="Submit" /><br />
     }
 </body>
