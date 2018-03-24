@@ -25,6 +25,10 @@
         @Html.TextBox("user", "Timothy")<br />
         @Html.Password("password", "123456")<br />
         <input type="submit" value="Submit" /><br />
+
+        @Html.TextArea("description", Model.Description)<br />
+        @Html.TextAreaFor(p => p.Description, Model.Description)<br />
+        <input type="submit" value="Submit" /><br />
     }
 </body>
 </html>
