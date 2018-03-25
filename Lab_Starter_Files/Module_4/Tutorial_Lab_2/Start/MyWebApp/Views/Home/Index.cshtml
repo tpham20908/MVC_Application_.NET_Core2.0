@@ -4,5 +4,7 @@
         @Html.ColorfulHeading(2, "orange", ViewData["state"].ToString())
         @Html.ColorfulHeading(3, "blue", ViewData["county"].ToString())
         @Html.ColorfulHeading(4, "green", ViewData["city"].ToString())
+
+        @Html.Table((string[])ViewData["columnNames"], (string[,])ViewData["content"])
     </body>
 </html>
