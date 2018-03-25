@@ -8,3 +8,13 @@ c:\Sources\edX\Courses\002\Labs\Lab 013 - Partial View\Finish\MyWebApp\obj\Debug
 c:\Sources\edX\Courses\002\Labs\Lab 013 - Partial View\Finish\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.AssemblyInfo.cs
 c:\Sources\edX\Courses\002\Labs\Lab 013 - Partial View\Finish\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.dll
 c:\Sources\edX\Courses\002\Labs\Lab 013 - Partial View\Finish\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.pdb
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\bin\Debug\netcoreapp2.0\MyWebApp.deps.json
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\bin\Debug\netcoreapp2.0\MyWebApp.runtimeconfig.json
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\bin\Debug\netcoreapp2.0\MyWebApp.runtimeconfig.dev.json
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\bin\Debug\netcoreapp2.0\MyWebApp.dll
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\bin\Debug\netcoreapp2.0\MyWebApp.pdb
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.csproj.CoreCompileInputs.cache
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.AssemblyInfoInputs.cache
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.AssemblyInfo.cs
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.dll
+C:\Users\Minh\Documents\TUNG\Studies\EdX\MVC_Application_.NET_Core2.0\Lab_Starter_Files\Module_4\Tutorial_Lab_4\Start\MyWebApp\obj\Debug\netcoreapp2.0\MyWebApp.pdb

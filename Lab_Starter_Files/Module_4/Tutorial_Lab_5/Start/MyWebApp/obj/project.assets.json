@@ -12533,23 +12533,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Timothy\\.nuget\\packages\\": {},
+    "C:\\Users\\Minh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Sources\\edX\\Courses\\002\\Labs\\Lab 014 - Uploading Files\\Start\\MyWebApp\\MyWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Lab_Starter_Files\\Module_4\\Tutorial_Lab_5\\Start\\MyWebApp\\MyWebApp.csproj",
       "projectName": "MyWebApp",
-      "projectPath": "c:\\Sources\\edX\\Courses\\002\\Labs\\Lab 014 - Uploading Files\\Start\\MyWebApp\\MyWebApp.csproj",
-      "packagesPath": "C:\\Users\\Timothy\\.nuget\\packages\\",
-      "outputPath": "c:\\Sources\\edX\\Courses\\002\\Labs\\Lab 014 - Uploading Files\\Start\\MyWebApp\\obj\\",
+      "projectPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Lab_Starter_Files\\Module_4\\Tutorial_Lab_5\\Start\\MyWebApp\\MyWebApp.csproj",
+      "packagesPath": "C:\\Users\\Minh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Minh\\Documents\\TUNG\\Studies\\EdX\\MVC_Application_.NET_Core2.0\\Lab_Starter_Files\\Module_4\\Tutorial_Lab_5\\Start\\MyWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Timothy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Minh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12573,14 +12573,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           }
         },
         "imports": [
