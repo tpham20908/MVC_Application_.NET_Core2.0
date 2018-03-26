@@ -23,5 +23,22 @@ namespace ProductManager.Controllers {
             else
                 return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Create() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Product product) {
+            if (ModelState.IsValid)
+                DataSource.AddProduct(product);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id) {
+            DataSource.RemoveProductByID(id);
+            return RedirectToAction("Index");
+        }
     }
 }
