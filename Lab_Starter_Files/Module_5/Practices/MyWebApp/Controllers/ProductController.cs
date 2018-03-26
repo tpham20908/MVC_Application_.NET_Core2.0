@@ -40,5 +40,18 @@ namespace ProductManager.Controllers {
             DataSource.RemoveProductByID(id);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id) {
+            var product = DataSource.GetProductByID(id);
+            return View(product);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Product product) {
+            if (ModelState.IsValid)
+                DataSource.UpdateProductByID(product.ID, product);
+            return RedirectToAction("Index");
+        }
     }
 }
