@@ -21,6 +21,9 @@ namespace MyWebApp.Controllers {
             } else if (dto.Operation == Operation.Update) {
                 // update the existing film by ID
                 return View("Updated");
+            } else if (dto.Operation == Operation.Delete) {
+                // delete the existing film by ID
+                return View("Deleted");
             } else {
                 return View("Error"); // we don't implement the Error view now
             }
