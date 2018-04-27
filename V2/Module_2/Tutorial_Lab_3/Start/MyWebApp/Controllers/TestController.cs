@@ -7,5 +7,12 @@ namespace MyWebApp.Controllers {
             ViewData["Items"] = "AAAA BBBBBB CCCCCCCCCCC".Split(" ");
             return View();
         }
+
+        public IActionResult Bar() {
+            ViewBag.Title = "Bar";
+            ViewBag.Header = "Header Bar";
+            ViewBag.Items = "DFEW DSFAA GWEF DSAF JFWEI".Split(" ");
+            return View();
+        }
     }
 }
