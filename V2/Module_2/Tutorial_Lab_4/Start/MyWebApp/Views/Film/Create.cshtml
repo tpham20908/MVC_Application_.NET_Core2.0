@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>Create or Update Film</h1>
+    <h1>Create Film</h1>
     <hr />
     <form action="createorupdate" method="POST">
         <span>ID</span>
@@ -14,15 +14,13 @@
             <option value="2017">2017</option>
         </select><br />
         <span>Genre</span>
-        <input type="checkbox" name="genres" value="action" /><span>Action</span>
-        <input type="checkbox" name="genres" value="comedy" /><span>Comedy</span>
-        <input type="checkbox" name="genres" value="war" /><span>War</span><br />
+        <input type="checkbox" name="genre" value="action" /><span>Action</span>
+        <input type="checkbox" name="genre" value="comedy" /><span>Comedy</span>
+        <input type="checkbox" name="genre" value="war" /><span>War</span><br />
         <span>In Store</span>
         <input type="radio" name="isinstore" value="true" /><span>Yes</span>
         <input type="radio" name="isinstore" value="false" /><span>No</span><br />
         <input type="submit" name="operation" value="Create" />
-        <input type="submit" name="operation" value="Update" />
-        <input type="submit" name="operation" value="Delete" />
     </form>
 </body>
 </html>

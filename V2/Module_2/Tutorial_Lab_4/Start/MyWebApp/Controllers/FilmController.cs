@@ -3,6 +3,7 @@ using MyWebApp.Models;
 
 namespace MyWebApp.Controllers {
     public class FilmController : Controller {
+        /*
         [HttpGet]
         public IActionResult CreateOrUpdate() {
             return View();
@@ -26,6 +27,37 @@ namespace MyWebApp.Controllers {
                 return View("Deleted");
             } else {
                 return View("Error"); // we don't implement the Error view now
+            }
+        }
+        */
+
+        [HttpGet]
+        public IActionResult Create() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Film film) {
+            if (this.ModelState.IsValid) {
+                // create a new film ...
+                return View("Created");
+            } else {
+                return View("Error");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Update() {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Update(Film film) {
+            if (this.ModelState.IsValid) {
+                // update the existing film by ID
+                return View("Updated");
+            } else {
+                return View("Error");
             }
         }
     }
