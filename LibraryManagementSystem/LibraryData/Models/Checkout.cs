@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryData.Models
 {
-    class CheckoutHistory
+    class Checkout
     {
         public int Id { get; set; }
 
@@ -14,8 +14,8 @@ namespace LibraryData.Models
 
         public LibraryCard LibraryCard { get; set; }
 
-        public DateTime CheckedOut { get; set; }
+        public DateTime Since { get; set; }
 
-        public DateTime? CheckedIn { get; set; }
+        public DateTime Until { get; set; }
     }
 }
