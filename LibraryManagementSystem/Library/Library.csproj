@@ -18,4 +18,8 @@
     <ProjectReference Include="..\LibraryData\LibraryData.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Catalog\" />
+  </ItemGroup>
+
 </Project>
