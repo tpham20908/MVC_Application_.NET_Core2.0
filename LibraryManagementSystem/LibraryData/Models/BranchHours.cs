@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryData.Models
 {
-    class BranchHours
+    public class BranchHours
     {
         public int Id { get; set; }
         public LibraryBranch Branch { get; set; }

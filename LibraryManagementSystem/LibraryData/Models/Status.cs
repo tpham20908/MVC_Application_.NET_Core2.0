@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryData.Models
 {
-    class Status
+    public class Status
     {
         public int Id { get; set; }
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryData.Models
 {
-    class Checkout
+    public class Checkout
     {
         public int Id { get; set; }
 
