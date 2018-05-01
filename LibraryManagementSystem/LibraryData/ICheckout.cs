@@ -9,6 +9,7 @@ namespace LibraryData
     {
         IEnumerable<Checkout> GetAll();
         Checkout GetById(int checkoutId);
+        Checkout GetLatestCheckout(int assetId);
         void Add(Checkout newCheckout);
         void CheckOutItem(int assetId, int libraryCardId);
         void CheckInItem(int assetId, int libraryCardId);
