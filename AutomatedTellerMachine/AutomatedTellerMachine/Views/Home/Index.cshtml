@@ -29,3 +29,25 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+You are using @Request.Browser.Browser, and that's OK! Email us at tungint@gmail.com if you 
+have any problems. Or send us a tweet at @@eifjsl.
+
+@{ 
+        var amounts = new List<Decimal>{ 100, 25.5m, -45, 276.25m };
+}
+
+<ul>
+    @foreach (Decimal amount in amounts)
+    {
+        <li>@formatAmount(amount)</li>
+    }
+    
+</ul>
+
+@helper formatAmount(decimal amount)
+{
+    var color = "blue";
+    if (amount < 0) { color = "red"; }
+    <span style="color: @color">@String.Format("{0:c}", amount)</span>
+}
