@@ -9,9 +9,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Contoso.Controllers
 {
+    [Route("")]
+    [Route("Home")]
     public class HomeController : Controller
     {
         // GET: /<controller>/
+        [Route("")]
+        [Route("Index")]
+        [Route("Index/{id}")]
         public IActionResult Index(int id)
         {
             Contact contact = new Contact
