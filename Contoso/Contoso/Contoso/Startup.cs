@@ -41,10 +41,12 @@ namespace Contoso
 
             app.UseMvc();
 
+            /*
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello Universe!");
             });
+            */
         }
     }
 }

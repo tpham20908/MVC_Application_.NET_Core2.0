@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Contoso.Controllers
 {
+    [Route("Members")]
     public class MemberHomeController : Controller
     {
-        [Route("Members")]
+        [Route("")]
+        [Route("Index")]
         public IActionResult Index()
         {
             return View();
