@@ -26,7 +26,14 @@ namespace Contoso
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
+
+            app.UseMvc(
+                routes =>
+                {
+                    routes.MapRoute("Default", "{Controller=Home}/{Action=Index}/{id?}");
+                }
+            );
 
             app.Run(async (context) =>
             {
