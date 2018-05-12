@@ -28,6 +28,7 @@ namespace Contoso
 
             //app.UseMvcWithDefaultRoute();
 
+            /*
             app.UseMvc(
                 routes =>
                 {
@@ -36,6 +37,9 @@ namespace Contoso
                     .MapRoute("Members", "Members/{controller=MemberHome}/{action=Index}/{id?}");
                 }
             );
+            */
+
+            app.UseMvc();
 
             app.Run(async (context) =>
             {

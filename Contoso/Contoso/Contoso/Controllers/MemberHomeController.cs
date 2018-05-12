@@ -8,6 +8,7 @@ namespace Contoso.Controllers
 {
     public class MemberHomeController : Controller
     {
+        [Route("Members")]
         public IActionResult Index()
         {
             return View();
