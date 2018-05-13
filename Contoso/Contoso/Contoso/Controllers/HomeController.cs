@@ -19,7 +19,8 @@ namespace Contoso.Controllers
         // [Route("Index/{id}")]
         public IActionResult Index(string redirectUrl)
         {
-            return LocalRedirect(redirectUrl);
+            //return LocalRedirect(redirectUrl);
+            return Redirect(redirectUrl);
 
             /*
             Contact contact = new Contact
