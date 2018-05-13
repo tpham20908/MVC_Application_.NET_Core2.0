@@ -8,18 +8,18 @@ namespace Contoso.Controllers
 {
     //[Route("Members")]
     //[Route("[controller]/[action]")]
-    [Route("[controller]")]
+    //[Route("[controller]")]
     public class MemberHomeController : Controller
     {
         [Route("")]
         //[Route("Index")]
-        [Route("[action]")]
+        //[Route("[action]")]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Route("access")]
+        //[Route("access")]
         public IActionResult AccessGranted()
         {
             return View();
