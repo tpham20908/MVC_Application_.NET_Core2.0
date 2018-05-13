@@ -19,7 +19,7 @@ namespace Contoso.Controllers
         // [Route("Index/{id}")]
         public IActionResult Index(int id)
         {
-            /*
+            
             Contact contact = new Contact
             {
                 Id = id,
@@ -28,8 +28,17 @@ namespace Contoso.Controllers
             };
 
             return View(contact);
+            /*
+            return Content("<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
+                "< head >< title > Home </ title ></ head >< body >Hi there " +
+                "@Model.FirstName @Model.LastName! Your Id is @Model.Id</ body >" +
+                "</ html > ");
             */
-            return Content("Hey there gorgeos");
+        }
+
+        public IActionResult DownloadData()
+        {
+            return File("/DownloadData/LetterOfAttendance.pdf", "text/pfd", "important.pdf");
         }
     }
 }

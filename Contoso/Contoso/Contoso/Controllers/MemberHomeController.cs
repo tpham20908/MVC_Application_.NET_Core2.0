@@ -11,7 +11,7 @@ namespace Contoso.Controllers
     //[Route("[controller]")]
     public class MemberHomeController : Controller
     {
-        [Route("")]
+        //[Route("")]
         //[Route("Index")]
         //[Route("[action]")]
         public IActionResult Index()
