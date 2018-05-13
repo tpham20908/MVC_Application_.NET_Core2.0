@@ -38,7 +38,8 @@ namespace Contoso.Controllers
 
         public IActionResult DownloadData()
         {
-            return File("/DownloadData/LetterOfAttendance.pdf", "text/pfd", "important.pdf");
+            //return File("/DownloadData/LetterOfAttendance.pdf", "text/pfd", "important.pdf");
+            return PhysicalFile("C:/Users/Minh/Documents/TUNG/Applications/list.txt", "text/plain");
         }
     }
 }
