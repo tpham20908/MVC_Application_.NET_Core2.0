@@ -12,13 +12,13 @@ namespace Contoso.Controllers
 {
     public class HomeController : Controller
     {
-        //[HttpGet]
-        public IActionResult IndexWithForm()
+        [HttpGet]
+        public IActionResult Index()
         {
             return View("IndexWithForm");
         }
 
-        //[HttpPost]
+        [HttpPost]
         public IActionResult Index(Contact contact)
         {
             /*
@@ -30,20 +30,26 @@ namespace Contoso.Controllers
             };
             */
 
-            Customer customer = new Customer
+            if (ModelState.IsValid)
             {
-                Id = 5,
-                CustomerName = "Startup"
-            };
+                Customer customer = new Customer
+                {
+                    Id = 5,
+                    CustomerName = "Startup"
+                };
 
-            HomeIndexViewModel vm = new HomeIndexViewModel
-            {
-                Contact = contact,
-                Customer = customer
+                HomeIndexViewModel vm = new HomeIndexViewModel
+                {
+                    Contact = contact,
+                    Customer = customer
 
-            };
+                };
 
-            return View(vm);
+                return View(vm);
+            }
+
+            return View("IndexWithForm");
+
         }
 
         public IActionResult DownloadData()
