@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contoso.Models;
+using Contoso.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -33,13 +34,23 @@ namespace Contoso.Controllers
                 LastName = "Pham"
             };
 
+            // 2 models cannot pass to View
             Customer customer = new Customer
             {
                 Id = 5,
                 CustomerName = "Startup"
             };
 
-            return View(contact);
+            HomeIndexViewModel vm = new HomeIndexViewModel
+            {
+                Contact = contact,
+                Customer = customer
+
+            };
+
+            return View(vm);
+
+            //return View(contact);
 
             /*
             return Content("<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
