@@ -12,13 +12,13 @@ namespace Contoso.Controllers
 {
     public class HomeController : Controller
     {
-        [HttpGet]
-        public IActionResult Index()
+        //[HttpGet]
+        public IActionResult IndexWithForm()
         {
             return View("IndexWithForm");
         }
 
-        [HttpPost]
+        //[HttpPost]
         public IActionResult Index(Contact contact)
         {
             /*
