@@ -17,14 +17,15 @@ namespace Contoso.Controllers
         // [Route("")]
         // [Route("Index")]
         // [Route("Index/{id}")]
-        public IActionResult Index(string redirectUrl)
+        public IActionResult Index(int id)
         {
-            return RedirectToAction("DownloadData");
+            //return RedirectToAction("index", "memberhome");
+            //return RedirectToRoute(new { controller = "memberhome", action = "index" });
 
             //return LocalRedirect(redirectUrl);
             //return Redirect(redirectUrl);
 
-            /*
+            
             Contact contact = new Contact
             {
                 Id = id,
@@ -32,7 +33,15 @@ namespace Contoso.Controllers
                 LastName = "Pham"
             };
 
+            Customer customer = new Customer
+            {
+                Id = 5,
+                CustomerName = "Startup"
+            };
+
             return View(contact);
+
+            /*
             return Content("<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
                 "< head >< title > Home </ title ></ head >< body >Hi there " +
                 "@Model.FirstName @Model.LastName! Your Id is @Model.Id</ body >" +
