@@ -10,31 +10,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Contoso.Controllers
 {
-    //[Route("")]
-    //[Route("Home")]
     public class HomeController : Controller
     {
-        // GET: /<controller>/
-        // [Route("")]
-        // [Route("Index")]
-        // [Route("Index/{id}")]
-        public IActionResult Index(int id)
+        [HttpGet]
+        public IActionResult Index()
         {
-            //return RedirectToAction("index", "memberhome");
-            //return RedirectToRoute(new { controller = "memberhome", action = "index" });
+            return View("IndexWithForm");
+        }
 
-            //return LocalRedirect(redirectUrl);
-            //return Redirect(redirectUrl);
-
-            
+        [HttpPost]
+        public IActionResult Index(Contact contact)
+        {
+            /*
             Contact contact = new Contact
             {
                 Id = id,
                 FirstName = "Tung",
                 LastName = "Pham"
             };
+            */
 
-            // 2 models cannot pass to View
             Customer customer = new Customer
             {
                 Id = 5,
@@ -49,15 +44,6 @@ namespace Contoso.Controllers
             };
 
             return View(vm);
-
-            //return View(contact);
-
-            /*
-            return Content("<html xmlns=\"http://www.w3.org/1999/xhtml\">" +
-                "< head >< title > Home </ title ></ head >< body >Hi there " +
-                "@Model.FirstName @Model.LastName! Your Id is @Model.Id</ body >" +
-                "</ html > ");
-            */
         }
 
         public IActionResult DownloadData()
