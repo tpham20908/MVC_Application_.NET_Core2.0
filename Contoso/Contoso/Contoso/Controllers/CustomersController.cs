@@ -20,8 +20,8 @@ namespace Contoso.Controllers
 
         public IActionResult PeopleList()
         {
-            //var people = db.Person.Where(p => p.BusinessEntityId < 3612 && c.BusinessEntityId > 3493);
-            ICollection<Person> people = db.Person.ToList();
+            //var people = db.Person.Where(p => p.BusinessEntityId < 3612 && p.BusinessEntityId > 3493);
+            ICollection<Person> people = db.Person.Where(p => p.BusinessEntityId < 3612 && p.BusinessEntityId > 3493).ToList();
             return View(people);
         }
     }
