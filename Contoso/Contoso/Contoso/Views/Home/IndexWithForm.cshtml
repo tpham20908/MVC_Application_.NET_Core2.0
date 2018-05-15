@@ -1,29 +1,31 @@
-﻿@{
-    Layout = null;
+﻿@*<form action="/home/index" method="post">*@
+
+@model Contact
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Id)
+    @Html.TextBoxFor(m => m.Id)
+    @*<label for="Id">Id: </label>
+    <input type="text" name="Id" value="" />*@
+    <br />
+
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @*<label for="FirstName">First name: </label>
+    <input type="text" name="FirstName" value="" />*@
+    <br />
+
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @*<label for="LastName">Last name: </label>
+    <input type="text" name="LastName" value="" />*@
+    <br />
+
+    @Html.LabelFor(m => m.PhoneNumber)
+    @Html.TextBoxFor(m => m.PhoneNumber)
+    @*<label for="PhoneNumber">Phone number: </label>
+    <input type="text" name="PhoneNumber" value="" />*@
+    <br />
+    <input type="submit" value="Submit" />
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Home</title>
-</head>
-<body>
-    <form action="/home/index" method="post">
-        <label for="Id">Id: </label>
-        <input type="text" name="Id" value="" />
-        <br />
-        <label for="FirstName">First name: </label>
-        <input type="text" name="FirstName" value="" />
-        <br />
-        <label for="LastName">Last name: </label>
-        <input type="text" name="LastName" value="" />
-        <br />
-        <label for="PhoneNumber">Phone number: </label>
-        <input type="text" name="PhoneNumber" value="" />
-        <br />
-        <input type="submit" value="Submit" />
-    </form>
-</body>
-</html>

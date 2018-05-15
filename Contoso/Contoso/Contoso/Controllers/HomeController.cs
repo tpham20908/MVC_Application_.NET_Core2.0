@@ -19,6 +19,7 @@ namespace Contoso.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Index(Contact contact)
         {
             /*
