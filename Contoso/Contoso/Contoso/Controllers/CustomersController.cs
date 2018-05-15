@@ -21,8 +21,13 @@ namespace Contoso.Controllers
 
         public IActionResult PeopleList()
         {
+            ViewBag.Title = "People list";
+            ViewBag.from = 1341;
+            ViewBag.to = 1489;
+            int from = ViewBag.from;
+            int to = ViewBag.to;
             //var people = db.Person.Where(p => p.BusinessEntityId < 3612 && p.BusinessEntityId > 3493);
-            ICollection<Person> people = db.Person.Where(p => p.BusinessEntityId < 3612 && p.BusinessEntityId > 3493).ToList();
+            ICollection<Person> people = db.Person.Where(p => p.BusinessEntityId >= from && p.BusinessEntityId <= to).ToList();
             return View(people);
         }
 

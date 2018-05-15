@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h4>@Model.Count People</h4>
+<h4>@Model.Count People from @ViewBag.from to @ViewBag.to</h4>
 <hr />
 
 @foreach (var p in Model)
