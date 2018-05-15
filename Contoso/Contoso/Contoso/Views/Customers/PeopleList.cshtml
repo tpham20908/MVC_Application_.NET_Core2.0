@@ -1,0 +1,30 @@
+﻿@model ICollection<Contoso.Entities.Person>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>People List</title>
+</head>
+<body>
+
+    <div>
+        <h4>@Model.Count People</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            @foreach (var p in Model)
+            {
+                <dl>
+                    <dt><b>Name: </b></dt>
+                    <dd>@p.FirstName @p.MiddleName @p.LastName</dd>
+                </dl>
+                <hr />
+            }
+    </div>
+</body>
+</html>

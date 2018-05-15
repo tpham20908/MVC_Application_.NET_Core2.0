@@ -1,0 +1,52 @@
+﻿@model Contoso.Entities.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.PersonType)</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PersonType)
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.Title)</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.FirstName)</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.MiddleName)</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.LastName)</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        
+</body>
+</html>
