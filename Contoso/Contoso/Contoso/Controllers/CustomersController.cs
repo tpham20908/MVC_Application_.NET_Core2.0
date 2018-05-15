@@ -14,6 +14,7 @@ namespace Contoso.Controllers
         public IActionResult Index(int num)
         {
             var person = db.Person.FirstOrDefault(p => p.BusinessEntityId == num);
+            ViewBag.Title = num;
 
             return View(person);
         }
