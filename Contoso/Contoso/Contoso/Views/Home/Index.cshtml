@@ -1,12 +1,10 @@
-﻿@model Contoso.ViewModels.HomeIndexViewModel
+﻿@*@model Contoso.ViewModels.HomeIndexViewModel*@
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Home</title>
-</head>
-<body>
+@model HomeIndexViewModel
+
+<p>
     Hi there @Model.Contact.FirstName @Model.Contact.LastName!
     Your Id is @Model.Contact.Id <br />
     You are working for @Model.Customer.CustomerName #@Model.Customer.Id
-</body>
-</html>
+</p>
+    
