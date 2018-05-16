@@ -1,6 +1,8 @@
 ﻿@*<form action="/home/index" method="post">*@
 
-@model Contact
+@model ContactVM
+
+@Html.ValidationSummary()
 
 @using (Html.BeginForm())
 {

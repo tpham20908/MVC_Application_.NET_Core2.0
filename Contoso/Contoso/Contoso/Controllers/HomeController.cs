@@ -20,19 +20,18 @@ namespace Contoso.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Index(Contact contact)
+        public IActionResult Index(ContactVM contactVm)
         {
-            /*
-            Contact contact = new Contact
-            {
-                Id = id,
-                FirstName = "Tung",
-                LastName = "Pham"
-            };
-            */
-
             if (ModelState.IsValid)
             {
+                Contact contact = new Contact()
+                {
+                    Id = (int)contactVm.Id,
+                    FirstName = contactVm.FirstName,
+                    LastName = contactVm.LastName,
+                    PhoneNumber = contactVm.PhoneNumber
+                };
+
                 Customer customer = new Customer
                 {
                     Id = 5,
@@ -49,7 +48,7 @@ namespace Contoso.Controllers
                 return View(vm);
             }
 
-            return View("IndexWithForm");
+            return View("IndexWithForm", contactVm);
 
         }
 
