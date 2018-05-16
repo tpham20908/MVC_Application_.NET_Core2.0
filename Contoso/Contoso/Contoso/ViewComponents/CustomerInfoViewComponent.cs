@@ -13,7 +13,7 @@ namespace Contoso.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             AdventureWorksContext context = new AdventureWorksContext();
-            int rand = new Random().Next(1, 20000);
+            int rand = new Random().Next(1000, 20000);
             var cust = await context.Person.FirstOrDefaultAsync(c => c.BusinessEntityId == rand);
 
             return View(cust);

@@ -1,0 +1,51 @@
+﻿
+@model Person
+
+<h4>@Model.FirstName @Model.LastName</h4>
+<hr />
+
+<span style="color: red;">@Html.ValidationSummary()</span>
+
+<form asp-controller="Customers" asp-action="UpdatePerson" asp-antiforgery="true">
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="BusinessEntityId" />
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.PersonType)</b>
+        </dt>
+        <dd>
+            <input asp-for="PersonType" />
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.Title)</b>
+        </dt>
+        <dd>
+            <input asp-for="Title" />
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.FirstName)</b>
+        </dt>
+        <dd>
+            <input asp-for="FirstName" />
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.MiddleName)</b>
+        </dt>
+        <dd>
+            <input asp-for="MiddleName" />
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.LastName)</b>
+        </dt>
+        <dd>
+            <input asp-for="LastName" />
+        </dd>
+        <dt>
+            <b>@Html.DisplayNameFor(model => model.ModifiedDate)</b>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+        <dt>&nbsp;</dt>
+        <dd><button type="submit">Save</button></dd>
+    </dl>
+</form>

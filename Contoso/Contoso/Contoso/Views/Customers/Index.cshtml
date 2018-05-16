@@ -1,44 +1,27 @@
 ﻿@*
-@model Contoso.Entities.Person
+    @model ICollection<Contoso.Entities.Person>
 
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+        @{
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
 *@
 
-@model  Person
+@model ICollection<Person>
 
-<h4>BusinessEntityId: @Model.BusinessEntityId</h4>
+<h4>@Model.Count People from @ViewBag.from to @ViewBag.to</h4>
 <hr />
-<dl class="dl-horizontal">
-    <dt>
-        <b>@Html.DisplayNameFor(model => model.PersonType)</b>
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.PersonType)
-    </dd>
-    <dt>
-        <b>@Html.DisplayNameFor(model => model.Title)</b>
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.Title)
-    </dd>
-    <dt>
-        <b>@Html.DisplayNameFor(model => model.FirstName)</b>
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.FirstName)
-    </dd>
-    <dt>
-        <b>@Html.DisplayNameFor(model => model.MiddleName)</b>
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.MiddleName)
-    </dd>
-    <dt>
-        <b>@Html.DisplayNameFor(model => model.LastName)</b>
-    </dt>
-    <dd>
-        @Html.DisplayFor(model => model.LastName)
-    </dd>
-</dl>
+
+@foreach (var p in Model)
+{
+    <dl class="dl-horizontal">
+        <dt><b>Name: </b></dt>
+        <dd>@p.FirstName @p.MiddleName @p.LastName</dd>
+        <dt>&nbsp;</dt>
+        <dd>
+            <a asp-controller="Customers" asp-action="GetPerson" asp-route-num=@p.BusinessEntityId>
+                Detail
+            </a>
+        </dd>
+    </dl>
+    <hr />
+}
