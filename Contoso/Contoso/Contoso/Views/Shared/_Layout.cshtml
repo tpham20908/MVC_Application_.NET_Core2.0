@@ -9,7 +9,8 @@
     <div>
         @RenderBody()
     </div>
-    @await Component.InvokeAsync("CustomerInfo")
+    <hr />
+    @await Component.InvokeAsync("CustomerInfo", false)
     @RenderSection("Footer", false)
     @RenderSection("Scripts", false)
 </body>
