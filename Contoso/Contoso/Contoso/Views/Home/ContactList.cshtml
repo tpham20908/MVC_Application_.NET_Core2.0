@@ -1,0 +1,10 @@
+﻿@model List<HomeIndexViewModel>
+
+<h2>Contact List: </h2>
+
+@foreach (var contact in Model)
+{
+    <hr />
+    @Html.Partial("_ContactInfo", contact)
+
+}

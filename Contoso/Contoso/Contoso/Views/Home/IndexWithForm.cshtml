@@ -1,33 +1,39 @@
 ﻿@*<form action="/home/index" method="post">*@
 
 @model ContactVM
-
-@Html.ValidationSummary()
+@*@Html.ValidationSummary()*@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(m => m.Id)
+    @Html.LabelFor(m => m.Id)<text>: </text>
     @Html.TextBoxFor(m => m.Id)
-    @*<label for="Id">Id: </label>
-    <input type="text" name="Id" value="" />*@
+    @Html.ValidationMessageFor(m => m.Id)
     <br />
 
-    @Html.LabelFor(m => m.FirstName)
+    @Html.LabelFor(m => m.FirstName)<text>: </text>
     @Html.TextBoxFor(m => m.FirstName)
-    @*<label for="FirstName">First name: </label>
-    <input type="text" name="FirstName" value="" />*@
+    @Html.ValidationMessageFor(m => m.FirstName)
     <br />
 
-    @Html.LabelFor(m => m.LastName)
+    @Html.LabelFor(m => m.LastName)<text>: </text>
     @Html.TextBoxFor(m => m.LastName)
-    @*<label for="LastName">Last name: </label>
-    <input type="text" name="LastName" value="" />*@
+    @Html.ValidationMessageFor(m => m.LastName)
     <br />
 
-    @Html.LabelFor(m => m.PhoneNumber)
+    @Html.LabelFor(m => m.PhoneNumber)<text>: </text>
     @Html.TextBoxFor(m => m.PhoneNumber)
-    @*<label for="PhoneNumber">Phone number: </label>
-    <input type="text" name="PhoneNumber" value="" />*@
+    @Html.ValidationMessageFor(m => m.PhoneNumber)
     <br />
     <input type="submit" value="Submit" />
+}
+
+@section Scripts {
+    <script>
+        document.body.style.backgroundColor = "green";
+    </script>
+}
+
+@section Footer{ 
+    <hr /><br />
+    This is IndexWithForm footer
 }

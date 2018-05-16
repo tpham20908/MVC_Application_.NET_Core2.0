@@ -52,6 +52,39 @@ namespace Contoso.Controllers
 
         }
 
+        public IActionResult ContactList()
+        {
+            List<HomeIndexViewModel> contactList = new List<HomeIndexViewModel>();
+
+            int i = 11;
+            while (i-- > 0)
+            {
+                Contact contact = new Contact
+                {
+                    Id = i,
+                    FirstName = "First " + i,
+                    LastName = "Last " + i,
+                    PhoneNumber = "514-555-931" + i
+                };
+
+                Customer customer = new Customer
+                {
+                    Id = i * 11 + 3,
+                    CustomerName = "Customer " + (i * 31 + 54)
+                };
+
+                HomeIndexViewModel vm = new HomeIndexViewModel
+                {
+                    Contact = contact,
+                    Customer = customer
+                };
+
+                contactList.Add(vm);
+            }
+
+            return View(contactList);
+        }
+
         public IActionResult DownloadData()
         {
             //return File("/DownloadData/LetterOfAttendance.pdf", "text/pfd", "important.pdf");
