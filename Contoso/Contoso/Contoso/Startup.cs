@@ -36,7 +36,7 @@ namespace Contoso
             }
 
             app.UseMvcWithDefaultRoute();
-            app.UseAuthentication();
+            app.UseIdentity();
 
            /*
             app.UseMvc(
