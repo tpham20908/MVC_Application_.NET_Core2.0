@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contoso.Models
 {
-    public class ContosoContext : DbContext
+    public class ContosoContext : IdentityDbContext
     {
         public ContosoContext(DbContextOptions<ContosoContext> options) : base(options)
         { }
