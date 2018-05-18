@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Contoso.Models
 {
-    public class ContosoContext : IdentityDbContext
+    public class ContosoContext : IdentityDbContext<ApplicationUser>
     {
         public ContosoContext(DbContextOptions<ContosoContext> options) : base(options)
         { }

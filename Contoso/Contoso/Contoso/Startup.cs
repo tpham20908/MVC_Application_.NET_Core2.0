@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Contoso.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Contoso
 {
@@ -20,6 +21,10 @@ namespace Contoso
             services.AddMvc();
             var connection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Contoso;Integrated Security=True;Connect Timeout=30;";
             services.AddDbContext<ContosoContext>(options => options.UseSqlServer(connection));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ContosoContext>()
+                .AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,9 +35,10 @@ namespace Contoso
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseMvcWithDefaultRoute();
+            app.UseMvcWithDefaultRoute();
+            app.UseAuthentication();
 
-           
+           /*
             app.UseMvc(
                 routes =>
                 {
@@ -41,7 +47,7 @@ namespace Contoso
                     .MapRoute("Members", "Members/{controller=MemberHome}/{action=Index}/{id?}");
                 }
             );
-            
+            */
 
             //app.UseMvc();
 
