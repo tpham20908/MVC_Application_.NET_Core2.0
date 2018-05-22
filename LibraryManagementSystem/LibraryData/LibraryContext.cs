@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using LibraryData.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryData
 {
@@ -7,6 +7,6 @@ namespace LibraryData
     {
         public LibraryContext(DbContextOptions options) : base(options) { }
 
-
+        public DbSet<Patron> Patrons { get; set; }
     }
 }
