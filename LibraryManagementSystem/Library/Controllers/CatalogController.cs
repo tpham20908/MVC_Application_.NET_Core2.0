@@ -30,8 +30,12 @@ namespace Library.Controllers
                     DeweyCallNumber = _assets.GetDeweyIndex(result.Id),
                     Type = _assets.GetType(result.Id)
                 });
+            var model = new AssetIndexModel
+            {
+                Assets = listingResult
+            };
 
-            return View(listingResult);
+            return View(model);
         }
     }
 }
