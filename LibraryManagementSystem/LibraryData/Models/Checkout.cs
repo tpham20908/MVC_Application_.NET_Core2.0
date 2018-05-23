@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LibraryData.Models
 {
-    public class Checkouts
+    public class Checkout
     {
         public int Id { get; set; }
 
