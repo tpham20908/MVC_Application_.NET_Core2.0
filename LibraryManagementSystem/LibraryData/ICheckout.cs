@@ -8,6 +8,7 @@ namespace LibraryData
     {
         IEnumerable<Checkout> GetAll();
         Checkout GetById(int checkoutId);
+        void Add(Checkout newCheckout);
         void CheckOutItem(int assetId, int libraryCardId);
         void CheckInItem(int assetId, int libraryCardId);
         IEnumerable<CheckoutHistory> GetCheckoutHistories(int id);
@@ -16,6 +17,7 @@ namespace LibraryData
         string GetCurrentHoldPatronName(int id);
         DateTime GetCurrentHoldPlaced(int id);
         IEnumerable<Hold> GetCurrentHolds(int id);
+        Checkout GetLatestCheckout(int assetId);
 
         void MarkLost(int assetId);
         void MarkFound(int assetId);
