@@ -127,7 +127,7 @@ namespace LibraryServices
 
             // look for existing holds on the item
             var currentHolds = _context.Holds
-                .Where(h => h.LibraryAsset == item);
+                .Where(h => h.LibraryAsset == item); // watchout for this
             // if there is hold
             if (currentHolds.Any())
             {
@@ -162,6 +162,43 @@ namespace LibraryServices
                 return;
                 // Add logic here to handle feedback to the user
             }
+
+            var item = _context.LibraryAssets
+                .FirstOrDefault(a => a.Id == assetId);
+
+            UpdateAssetStatus(assetId, "Checked Out");
+
+            var libraryCard = _context.LibraryCards
+                .Include(c => c.Checkouts)
+                .FirstOrDefault(c => c.Id == libraryCardId);
+
+            var now = DateTime.Now;
+
+            var checkout = new Checkout
+            {
+                LibraryAsset = item,
+                LibraryCard = libraryCard,
+                Since = now,
+                Until = GetDefaultCheckoutTime(now)
+            };
+
+            _context.Add(checkout);
+
+            var checkoutHistory = new CheckoutHistory
+            {
+                CheckedOut = now,
+                LibraryAsset = item,
+                LibraryCard = libraryCard
+            };
+
+            _context.Add(checkoutHistory);
+
+            _context.SaveChanges();
+        }
+
+        private DateTime GetDefaultCheckoutTime(DateTime now)
+        {
+            return now.AddDays(21);
         }
 
         private bool IsCheckedOut(int assetId)
