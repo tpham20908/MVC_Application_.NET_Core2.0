@@ -110,17 +110,68 @@ namespace LibraryServices
             if (checkout != null) _context.Remove(checkout);
         }
 
-        public void PlaceHold(int assetId, int libraryCardId)
-        {
-            throw new NotImplementedException();
-        }
-
         public void CheckInItem(int assetId, int libraryCardId)
         {
-            throw new NotImplementedException();
+            var now = DateTime.Now;
+
+            var item = _context.LibraryAssets
+                .FirstOrDefault(a => a.Id == assetId);
+
+            _context.Update(item);
+
+            // remove any existing checkouts on the item
+            RemoveExistingCheckouts(assetId);
+
+            // close any existing checkout history
+            CloseExistingCheckoutHistory(assetId, now);
+
+            // look for existing holds on the item
+            var currentHolds = _context.Holds
+                .Where(h => h.LibraryAsset == item);
+            // if there is hold
+            if (currentHolds.Any())
+            {
+                //checkout the item to the library card with the earliest hold.
+                CheckoutToEarliestHold(assetId, currentHolds);
+            }
+            // otherwise, update the item status to available
+            UpdateAssetStatus(assetId, "Available");
+
+            _context.SaveChanges();
+        }
+
+        private void CheckoutToEarliestHold(int assetId, IQueryable<Hold> currentHolds)
+        {
+            var earliestHold = currentHolds
+                .OrderBy(h => h.HoldPlaced)
+                .FirstOrDefault();
+
+            var card = earliestHold.LibraryCard;
+
+            _context.Remove(earliestHold);
+
+            _context.SaveChanges();
+
+            CheckOutItem(assetId, card.Id);
         }
 
         public void CheckOutItem(int assetId, int libraryCardId)
+        {
+            if (IsCheckedOut(assetId))
+            {
+                return;
+                // Add logic here to handle feedback to the user
+            }
+        }
+
+        private bool IsCheckedOut(int assetId)
+        {
+            return _context.Checkouts
+                .Where(co => co.LibraryAsset.Id == assetId)
+                .Any();
+        }
+
+        public void PlaceHold(int assetId, int libraryCardId)
         {
             throw new NotImplementedException();
         }
