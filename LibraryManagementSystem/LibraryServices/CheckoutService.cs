@@ -23,7 +23,6 @@ namespace LibraryServices
             _context.SaveChanges();
         }
 
-
         public IEnumerable<Checkout> GetAll()
         {
             return _context.Checkouts;
@@ -127,7 +126,9 @@ namespace LibraryServices
 
             // look for existing holds on the item
             var currentHolds = _context.Holds
-                .Where(h => h.LibraryAsset == item); // watchout for this
+                //.Include(h => h.LibraryAsset)
+                //.Include(h => h.LibraryCard)
+                .Where(h => h.LibraryAsset == item);
             // if there is hold
             if (currentHolds.Any())
             {
@@ -255,6 +256,30 @@ namespace LibraryServices
                 //.Include(h => h.LibraryCard)
                 .FirstOrDefault(h => h.Id == holdId)
                 .HoldPlaced;
+        }
+
+        public string GetCurrentCheckoutPatron(int assetId)
+        {
+            var checkout = GetCheckoutByAssetId(assetId);
+
+            if (checkout == null)
+                return "";
+
+            var cardId = checkout.LibraryCard.Id;
+
+            var patron = _context.Patrons
+                //.Include(p => p.LibraryCard)
+                .FirstOrDefault(p => p.LibraryCard.Id == cardId);
+
+            return string.Format("{0} {1}", patron.FirstName, patron.LastName);
+        }
+
+        private Checkout GetCheckoutByAssetId(int assetId)
+        {
+            return _context.Checkouts
+                //.Include(c => c.LibraryAsset)
+                //.Include(c => c.LibraryCard)
+                .FirstOrDefault(c => c.LibraryAsset.Id == assetId);
         }
     }
 }
