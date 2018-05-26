@@ -231,9 +231,20 @@ namespace LibraryServices
             _context.SaveChanges();
         }
 
-        public string GetCurrentHoldPatronName(int id)
+        public string GetCurrentHoldPatronName(int holdId)
         {
-            throw new NotImplementedException();
+            var hold = _context.Holds
+                //.Include(h => h.LibraryAsset)
+                //.Include(h => h.LibraryCard)
+                .FirstOrDefault(h => h.Id == holdId);
+
+            var cardId = hold?.LibraryCard.Id;
+
+            var patron = _context.Patrons
+                //.Include(p => p.LibraryCard)
+                .FirstOrDefault(p => p.LibraryCard.Id == cardId);
+
+            return string.Format("{0} {1}", patron?.FirstName, patron?.LastName);
         }
 
         public DateTime GetCurrentHoldPlaced(int id)
@@ -242,3 +253,4 @@ namespace LibraryServices
         }
     }
 }
+ 
