@@ -72,5 +72,10 @@ namespace Library.Controllers
 
             return View(model);
         }
+
+        public IActionResult Checkout(int id)
+        {
+
+        }
     }
 }
