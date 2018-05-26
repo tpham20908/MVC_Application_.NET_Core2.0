@@ -247,9 +247,14 @@ namespace LibraryServices
             return string.Format("{0} {1}", patron?.FirstName, patron?.LastName);
         }
 
-        public DateTime GetCurrentHoldPlaced(int id)
+        public DateTime GetCurrentHoldPlaced(int holdId)
         {
-            throw new NotImplementedException();
+            return
+                _context.Holds
+                //.Include(h => h.LibraryAsset)
+                //.Include(h => h.LibraryCard)
+                .FirstOrDefault(h => h.Id == holdId)
+                .HoldPlaced;
         }
     }
 }
