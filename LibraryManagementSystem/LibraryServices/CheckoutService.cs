@@ -210,7 +210,25 @@ namespace LibraryServices
 
         public void PlaceHold(int assetId, int libraryCardId)
         {
-            throw new NotImplementedException();
+            var asset = _context.LibraryAssets
+                .FirstOrDefault(a => a.Id == assetId);
+
+            var card = _context.LibraryCards
+                .FirstOrDefault(c => c.Id == libraryCardId);
+
+            if (asset.Status.Name == "Available")
+                UpdateAssetStatus(assetId, "On Hold");
+
+            var hold = new Hold
+            {
+                HoldPlaced = DateTime.Now,
+                LibraryAsset = asset,
+                LibraryCard = card
+            };
+
+            _context.Add(hold);
+
+            _context.SaveChanges();
         }
 
         public string GetCurrentHoldPatronName(int id)
