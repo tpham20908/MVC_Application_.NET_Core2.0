@@ -202,7 +202,7 @@ namespace LibraryServices
             return now.AddDays(21);
         }
 
-        private bool IsCheckedOut(int assetId)
+        public bool IsCheckedOut(int assetId)
         {
             return _context.Checkouts
                 .Where(co => co.LibraryAsset.Id == assetId)
