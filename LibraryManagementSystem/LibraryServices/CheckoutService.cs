@@ -212,6 +212,7 @@ namespace LibraryServices
         public void PlaceHold(int assetId, int libraryCardId)
         {
             var asset = _context.LibraryAssets
+                .Include(a => a.Status)
                 .FirstOrDefault(a => a.Id == assetId);
 
             var card = _context.LibraryCards
@@ -235,8 +236,8 @@ namespace LibraryServices
         public string GetCurrentHoldPatronName(int holdId)
         {
             var hold = _context.Holds
-                //.Include(h => h.LibraryAsset)
-                //.Include(h => h.LibraryCard)
+                .Include(h => h.LibraryAsset)
+                .Include(h => h.LibraryCard)
                 .FirstOrDefault(h => h.Id == holdId);
 
             var cardId = hold?.LibraryCard.Id;
@@ -268,7 +269,7 @@ namespace LibraryServices
             var cardId = checkout.LibraryCard.Id;
 
             var patron = _context.Patrons
-                //.Include(p => p.LibraryCard)
+                .Include(p => p.LibraryCard)
                 .FirstOrDefault(p => p.LibraryCard.Id == cardId);
 
             return string.Format("{0} {1}", patron.FirstName, patron.LastName);
@@ -277,8 +278,8 @@ namespace LibraryServices
         private Checkout GetCheckoutByAssetId(int assetId)
         {
             return _context.Checkouts
-                //.Include(c => c.LibraryAsset)
-                //.Include(c => c.LibraryCard)
+                .Include(c => c.LibraryAsset)
+                .Include(c => c.LibraryCard)
                 .FirstOrDefault(c => c.LibraryAsset.Id == assetId);
         }
     }

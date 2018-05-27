@@ -1,11 +1,8 @@
 ﻿using Library.Models.Catalog;
-using Library.Models.Checkout;
+using Library.Models.CheckoutModels;
 using LibraryData;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Library.Controllers
 {
@@ -67,7 +64,7 @@ namespace Library.Controllers
                 ISBN = _assets.GetIsbn(id),
                 CheckoutHistory = _checkouts.GetCheckoutHistories(id),
                 LatestCheckout = _checkouts.GetLatestCheckout(id),
-                PatronName = _checkouts.GetCurrentHoldPatronName(id),
+                PatronName = _checkouts.GetCurrentCheckoutPatron(id),
                 CurrentHolds = currentHolds
             };
 
