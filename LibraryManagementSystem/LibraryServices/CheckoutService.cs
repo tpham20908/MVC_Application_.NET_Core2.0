@@ -70,7 +70,7 @@ namespace LibraryServices
             UpdateAssetStatus(assetId, "Available");
 
             RemoveExistingCheckouts(assetId);
-            
+
             CloseExistingCheckoutHistory(assetId, now);
 
             _context.SaveChanges();
@@ -109,7 +109,7 @@ namespace LibraryServices
             if (checkout != null) _context.Remove(checkout);
         }
 
-        public void CheckInItem(int assetId, int libraryCardId)
+        public void CheckInItem(int assetId)
         {
             var now = DateTime.Now;
 
@@ -126,14 +126,15 @@ namespace LibraryServices
 
             // look for existing holds on the item
             var currentHolds = _context.Holds
-                //.Include(h => h.LibraryAsset)
-                //.Include(h => h.LibraryCard)
+                .Include(h => h.LibraryAsset)
+                .Include(h => h.LibraryCard)
                 .Where(h => h.LibraryAsset == item);
             // if there is hold
             if (currentHolds.Any())
             {
                 //checkout the item to the library card with the earliest hold.
                 CheckoutToEarliestHold(assetId, currentHolds);
+                return;
             }
             // otherwise, update the item status to available
             UpdateAssetStatus(assetId, "Available");
@@ -284,4 +285,3 @@ namespace LibraryServices
         }
     }
 }
- 
