@@ -18,7 +18,7 @@
                         <div id="patronCardId">Library Card ID: @Model.LibraryCardId</div>
                         <div id="patronAddress">Address: @Model.Address</div>
                         <div id="patronTel">Telephone: @Model.Telephone</div>
-                        <div id="patronDate">Member Since: @Model.MemberSince</div>
+                        <div id="patronDate">Member Since: @Model.MemberSince.ToString("d")</div>
                         <div id="patronLibrary">Home Library: @Model.HomeLibraryBranch</div>
                         @if (@Model.OverDueFees > 0)
                         {
@@ -65,10 +65,14 @@
                         <ul>
                             @foreach (var hold in Model.Holds)
                             {
-                                <li>@hold.LibraryAsset.Title  - Placed on @hold.HoldPlaced.ToString("dd/MM/yyyy - HH:mm")</li>
+                                <li>@hold.LibraryAsset.Title  - Placed on @hold.HoldPlaced</li>
                             }
                         </ul>
                     </div>
+                }
+                else
+                {
+                    <div>No items on hold.</div>
                 }
             </div>
         </div>
