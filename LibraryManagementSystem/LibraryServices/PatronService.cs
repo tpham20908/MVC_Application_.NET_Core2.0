@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace LibraryServices
 {
-    class PatronService : IPatron
+    public class PatronService : IPatron
     {
         private LibraryContext _context;
 
