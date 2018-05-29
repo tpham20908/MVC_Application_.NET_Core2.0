@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace LibraryServices
 {
-    public class BranchService : ILibraryBranch
+    public class BranchService : IBranch
     {
         private LibraryContext _context;
 
@@ -59,7 +59,7 @@ namespace LibraryServices
         public bool IsBranchOpen(int branchId)
         {
             var currentTimeHour = DateTime.Now.Hour;
-            var currentDayOfWeek = (int)DateTime.Now.DayOfWeek + 1;
+            var currentDayOfWeek = (int)DateTime.Now.DayOfWeek;
             var hours = _context.BranchHours.Where(h => h.Branch.Id == branchId);
             var dayHours = hours.FirstOrDefault(h => h.DayOfWeek == currentDayOfWeek);
             var isOpen = currentTimeHour < dayHours.Closetime && currentTimeHour > dayHours.OpenTime;
@@ -86,12 +86,13 @@ namespace LibraryServices
 
         private string HumanizeTime(int time)
         {
-            return TimeSpan.FromHours(time).ToString("hh : mm");
+            return TimeSpan.FromHours(time).ToString("hh\":\"mm");
         }
 
         private string HumanizeDay(int dayOfWeek)
         {
-            return Enum.GetName(typeof(DayOfWeek), dayOfWeek);
+            // our data correlates 1 as Sunday
+            return Enum.GetName(typeof(DayOfWeek), dayOfWeek - 1);
         }
     }
 }

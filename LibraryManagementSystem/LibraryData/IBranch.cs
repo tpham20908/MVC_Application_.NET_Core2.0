@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LibraryData
 {
-    public interface ILibraryBranch
+    public interface IBranch
     {
         IEnumerable<LibraryBranch> GetAll();
         IEnumerable<Patron> GetPatrons(int branchId);
