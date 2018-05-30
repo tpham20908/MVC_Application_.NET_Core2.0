@@ -11,6 +11,7 @@ namespace ImageGallery.Datas.Models
         public string Title { get; set; }
         public DateTime Created { get; set; }
         public string Url { get; set; }
-        public IEnumerable<string> Tags { get; set; }
+
+        public virtual IEnumerable<ImageTag> Tags { get; set; }
     }
 }
