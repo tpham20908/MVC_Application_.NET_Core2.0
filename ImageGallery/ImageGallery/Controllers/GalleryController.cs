@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ImageGallery.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ImageGallery.Controllers
@@ -10,6 +7,11 @@ namespace ImageGallery.Controllers
     {
         public IActionResult Index()
         {
+            var model = new GalleryIndexModel()
+            {
+
+            };
+
             return View();
         }
     }
