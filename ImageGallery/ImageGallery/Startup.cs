@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ImageGallery.Datas;
+using ImageGallery.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ namespace ImageGallery
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<IImage, ImageService>();
             services.AddDbContext<ImagesGalleryDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
         }
