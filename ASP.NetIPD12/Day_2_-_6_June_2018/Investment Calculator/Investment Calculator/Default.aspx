@@ -53,7 +53,8 @@
                     <td class="auto-style2"><strong>Annual interest rate</strong></td>
                     <td>
                         <asp:TextBox ID="txtRate" runat="server" Width="200px"></asp:TextBox>
-                    &nbsp;<asp:RequiredFieldValidator ID="rfVRate" runat="server" ControlToValidate="txtRate" Display="Dynamic" ErrorMessage="Interest rate is required" Font-Bold="True" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    &nbsp;
+                        <asp:RequiredFieldValidator ID="rfVRate" runat="server" ControlToValidate="txtRate" Display="Dynamic" ErrorMessage="Interest rate is required" Font-Bold="True" ForeColor="Red">*</asp:RequiredFieldValidator>
                         <asp:RangeValidator ID="rvRate" runat="server" ControlToValidate="txtRate" Display="Dynamic" ErrorMessage="Interest rate has to be between 1  &amp; 20" Font-Bold="True" ForeColor="Red" MaximumValue="20" MinimumValue="1" SetFocusOnError="True" Type="Double">*</asp:RangeValidator>
                     </td>
                 </tr>

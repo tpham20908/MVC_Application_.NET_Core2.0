@@ -53,7 +53,7 @@ namespace User_Information
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             Page.Validate();
-            if(Page.IsValid)
+            if (Page.IsValid)
             {
                 String record =
                 txtName.Text + " | " +
@@ -67,13 +67,13 @@ namespace User_Information
                 lblRecord.Text = "New record add succesfully..Number of records is: " + updateCounter();
                 clearForm();
             }
-            
+
         }
 
         /*Clear function
          * clear all data in the form
          */
-         private void clearForm()
+        private void clearForm()
         {
             txtName.Text = string.Empty;
             txtDOB.Text = string.Empty;
@@ -84,7 +84,7 @@ namespace User_Information
 
         /*update hidden value html control
          */
-         private int updateCounter()
+        private int updateCounter()
         {
             int counter = int.Parse(hidVal.Value.ToString());
             counter++;
