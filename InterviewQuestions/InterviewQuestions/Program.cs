@@ -11,6 +11,33 @@ namespace InterviewQuestions
     {
         static void Main(string[] args)
         {
+            // abstract class
+            FulltimeEmployee fte = new FulltimeEmployee()
+            {
+                ID = 209,
+                FirstName = "John",
+                LastName = "Doe",
+                AnnualSalary = 87000
+            };
+
+            Console.WriteLine(fte.GetFullName());
+            Console.WriteLine(fte.GetMonthlySalary());
+            Console.WriteLine("-----------------------");
+
+            ContractEmployee cte = new ContractEmployee()
+            {
+                ID = 213,
+                FirstName = "Jane",
+                LastName = "Doe",
+                HourlyPay = 35,
+                TotalHours = 170
+            };
+
+            Console.WriteLine(cte.GetFullName());
+            Console.WriteLine(cte.GetMonthlySalary());
+
+
+            /*
             // 2. jagged array is an array of arrays
             string[][] jaggedArr = new string[3][];
             jaggedArr[0] = new string[3];
@@ -34,6 +61,7 @@ namespace InterviewQuestions
                 }
                 Console.WriteLine();
             }
+            */
 
             /*
             // 1. store different type in array in C#? Yes with object array or ArrayList
