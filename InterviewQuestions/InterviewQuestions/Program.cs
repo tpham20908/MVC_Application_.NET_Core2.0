@@ -11,6 +11,11 @@ namespace InterviewQuestions
     {
         static void Main(string[] args)
         {
+            // delegate is a type safe function pointer
+            DelegateEx del = new DelegateEx(Hello);
+            del("Greeting from Hello function");
+
+            /*
             // abstract class
             FulltimeEmployee fte = new FulltimeEmployee()
             {
@@ -35,7 +40,7 @@ namespace InterviewQuestions
 
             Console.WriteLine(cte.GetFullName());
             Console.WriteLine(cte.GetMonthlySalary());
-
+            */
 
             /*
             // 2. jagged array is an array of arrays
@@ -81,6 +86,11 @@ namespace InterviewQuestions
                 Console.WriteLine(item);
             }
             */
+        }
+
+        public static void Hello(string str)
+        {
+            Console.WriteLine(str);
         }
     }
 
