@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            // Create model object
+            var product1 = {ID: 101, Name: "Red Delicious Apple", Price: 2.99};
+
+            // Serialize JS ojbect to JSON string
+            var jsonString = JSON.stringify(product1);
+            document.write(jsonString);
+            document.write("<br/>");
+
+            // Deserialize JSON string back to JS object
+            var str = '{"ID":109,"Name":"Fuji Apple","Price":3.99, "Packed": "August"}';
+            var product2 = JSON.parse(str);
+            document.write("Product ID is " + product2.ID + "<br/>");
+            document.write("Product Name is " + product2.Name + "<br/>");
+            document.write("Product Price is " + product2.Price + "<br/>");
+            document.write("Product packed in " + product2.Packed + "<br/>");
+        </script>
+    </head>
+    <body>
+        <h2>Welcome to HTML App!</h2>
+    </body>
+</html>
