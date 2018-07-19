@@ -7,14 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script>
-        var p1 = {id: 101, name: "Product 101", price: 29.5}
-        var jsonStr = JSON.stringify(p1);
-        document.write(jsonStr);
-        document.write("<br/>");
-        document.write("=========================");
-        document.write("<br/>");
-        var object = JSON.parse(jsonStr);
-        document.write("id: " + object.id + ", name: " + object.name + ", price: " + object.price);
+
+        // var p1 = {id: 101, name: "Product 101", price: 29.5}
+        // var jsonStr = JSON.stringify(p1);
+        // document.write(jsonStr);
+        // document.write("<br/>");
+        // document.write("=========================");
+        // document.write("<br/>");
+        // var object = JSON.parse(jsonStr);
+        // document.write("id: " + object.id + ", name: " + object.name + ", price: " + object.price);
+
+        var products = [
+            {"ID":2005,"Name":"Tilapia","Price":23.99},
+            {"ID":2006,"Name":"Calmar","Price":35.99},
+            {"ID":2007,"Name":"Basa","Price":18.99},
+            {"ID":2008,"Name":"Salmon","Price":32.99}
+        ];
+
+        var jsonStr = JSON.stringify(products);
+
+        document.write(jsonStr + "<br/>");
+
+        var objects = JSON.parse(jsonStr);
+        for (var i in objects) {
+            document.write("ID: " + objects[i].ID + ", Name: " + objects[i].Name + 
+            ", Price: " + objects[i].Price + "<br/>");
+        }
     </script>
 </head>
 <body>
