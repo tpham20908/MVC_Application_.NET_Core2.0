@@ -42,7 +42,7 @@ namespace WebServer.Controllers {
             if (!this.ModelState.IsValid) {
                 return BadRequest();
             } else if (Repository.Products.ContainsKey(id)) {
-                product = Repository.Products[id];
+                Repository.Products[id] = product;
                 return Ok();
             } else {
                 return NotFound();
