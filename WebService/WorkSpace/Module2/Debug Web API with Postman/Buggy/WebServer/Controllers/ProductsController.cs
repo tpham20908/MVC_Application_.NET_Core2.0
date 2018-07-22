@@ -31,6 +31,8 @@ namespace WebServer.Controllers {
 
                 product.ID = maxExistingID + 1;
 
+                Repository.Products.Add(product.ID, product);
+
                 return Created($"api/products/{product.ID}", product);
             }
         }
