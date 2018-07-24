@@ -21,4 +21,14 @@ public class ProductsController : Controller {
         FakeData.Products.Add(product.ID, product);
         return product;
     }
+
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody]Product product) {
+        if (FakeData.Products.ContainsKey(id)) {
+            var target = FakeData.Products[id];
+            target.ID = product.ID;
+            target.Name = product.Name;
+            target.Price = product.Price;
+        }
+    }
 }
