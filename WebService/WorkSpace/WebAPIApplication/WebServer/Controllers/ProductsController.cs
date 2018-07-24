@@ -14,4 +14,11 @@ public class ProductsController : Controller {
         else
             return null;
     }
+
+    [HttpPost]
+    public Product Post([FromBody]Product product) {
+        product.ID = FakeData.Products.Keys.Max() + 1;
+        FakeData.Products.Add(product.ID, product);
+        return product;
+    }
 }
