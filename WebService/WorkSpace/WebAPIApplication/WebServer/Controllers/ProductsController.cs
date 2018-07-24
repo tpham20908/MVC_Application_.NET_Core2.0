@@ -31,4 +31,11 @@ public class ProductsController : Controller {
             target.Price = product.Price;
         }
     }
+
+    [HttpDelete("{id}")]
+    public void Delete(int id) {
+        if (FakeData.Products.ContainsKey(id)) {
+            FakeData.Products.Remove(id);
+        }
+    }
 }
